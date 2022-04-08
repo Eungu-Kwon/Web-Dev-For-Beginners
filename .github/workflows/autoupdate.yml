@@ -37,9 +37,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: "${{ secrets.ACCESS_TOKEN }}"
+          ref: 'english'
 
-      - name: Checkout to english
-        run: git branch english origin/english
+      #- name: Checkout to english
+      #  run: git branch english origin/english
 
       # Add remote english upstream
       - name: Add remote upstream
