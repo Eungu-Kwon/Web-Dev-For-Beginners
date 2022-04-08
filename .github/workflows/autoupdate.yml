@@ -70,11 +70,11 @@ jobs:
         
       # Merge upstream/main to main
       - name: Merge branch
-        if: ${{ env.maincommit == env.upstreamcommit }}
+        if: ${{ env.maincommit != env.upstreamcommit }}
         run: git merge upstream/main
 
       - name: GitHub Push
-        if: ${{ env.maincommit == env.upstreamcommit }}
+        if: ${{ env.maincommit != env.upstreamcommit }}
         run: git push origin english
 
       - run: echo "This job's status is ${{ job.status }}."
