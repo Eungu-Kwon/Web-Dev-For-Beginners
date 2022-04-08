@@ -39,7 +39,7 @@ jobs:
           token: "${{ secrets.ACCESS_TOKEN }}"
 
       - name: Checkout to english
-        run: git checkout english
+        run: git branch english origin/english
 
       # Add remote english upstream
       - name: Add remote upstream
